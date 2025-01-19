@@ -1,50 +1,65 @@
 import 'package:flutter/material.dart';
 import 'package:plant_app/constants.dart';
+import 'package:plant_app/screens/details/components/image_icons.dart';
+import 'package:plant_app/screens/details/components/title_and_price.dart';
 
 class Body extends StatelessWidget {
-
-
   @override
   Widget build(BuildContext context) {
-   Size size=MediaQuery.of(context).size;
-   return Column(
-    children:
-    <Widget>
-     [
-      Row(
-        children:<Widget>
-        
-         [
-          Expanded(child: 
-          Column(),
+    Size size = MediaQuery.of(context).size;
+    return SingleChildScrollView(
+      child: Column(
+        children: <Widget>[
+          ImageAndIcons(size: size),
+          TitleAndPrice(
+            title: "Aditya",
+            country: "India",
+            price: 600,
           ),
-          Container(
-            height: size.height*0.8,
-            width: size.width*0.75,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(63),
-                bottomLeft: Radius.circular(63),
-                 ),
-                 boxShadow: [
-                  BoxShadow(
-                    offset: Offset(0, 10),
-                    blurRadius: 60,
-                    color: kPrimaryColor.withOpacity(0.29),
-                  )
-                 ],
-             image: DecorationImage(
-              alignment: Alignment.centerLeft,
-              fit:BoxFit.cover,
-              image:AssetImage("assets/images/img.png"),
-             ),
-             ),
-            )
-         ],
-          )
-
-      ],
-      );
- 
+          const SizedBox(height: kDefaultPadding),
+          Row(
+            children: [
+              SizedBox(
+                width: size.width / 2,
+                height: 84,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: kPrimaryColor,
+                    shape: const RoundedRectangleBorder(
+                      borderRadius: BorderRadius.only(
+                        topRight: Radius.circular(20),
+                      ),
+                    ),
+                  ),
+                  onPressed: () {},
+                  child: const Text(
+                    "Buy Now",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ),
+              Expanded(
+                child: TextButton(
+                  onPressed: () {},
+                  child: const Text(
+                    "Description",
+                    style: TextStyle(
+                      color: kPrimaryColor,
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: kDefaultPadding * 2),
+        ],
+      ),
+    );
   }
 }
