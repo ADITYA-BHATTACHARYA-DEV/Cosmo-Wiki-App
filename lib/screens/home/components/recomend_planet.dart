@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:plant_app/constants.dart';
+import 'package:plant_app/screens/details/components/details_screen.dart';
 
 
 class RecomendsPlanet extends StatelessWidget {
@@ -18,14 +19,55 @@ class RecomendsPlanet extends StatelessWidget {
                   title: 'Aditya',
                   country: 'India',
                   price: 440,
-                  press: () {},
+                  press: () {
+                     Navigator.push(context, 
+                      MaterialPageRoute(builder: 
+                      (context)=>DetailsScreen(),
+ 
+                      ),
+
+
+
+                     );
+
+                  },
+                 
                 ),
                 RecomendPlanetCard(
+                  image: 'assets/images/image_1.png',
+                  title: 'Aditya',
+                  country: 'India',
+                  price: 440,
+                  press: () {
+   Navigator.push(context, 
+                      MaterialPageRoute(builder: 
+                      (context)=>DetailsScreen(),
+ 
+                      ),
+
+
+
+                     );
+
+                    
+                  },
+                ),
+                   RecomendPlanetCard(
                   image: 'assets/images/image_3.png',
                   title: 'Aditya',
                   country: 'India',
                   price: 440,
-                  press: () {},
+                  press: () {
+                       Navigator.push(context, 
+                      MaterialPageRoute(builder: 
+                      (context)=>DetailsScreen(),
+ 
+                      ),
+
+
+
+                     );
+                  },
                 ),
     ]
     ) 
