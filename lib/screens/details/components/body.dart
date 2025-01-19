@@ -31,7 +31,9 @@ class Body extends StatelessWidget {
                       ),
                     ),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    // Handle buy action
+                  },
                   child: const Text(
                     "Buy Now",
                     style: TextStyle(
@@ -44,7 +46,9 @@ class Body extends StatelessWidget {
               ),
               Expanded(
                 child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    // Handle description action
+                  },
                   child: const Text(
                     "Description",
                     style: TextStyle(
